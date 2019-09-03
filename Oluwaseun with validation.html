@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>CV Page with Form</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            const validate = () => {
+                let contactName = document.getElementById("name")
+                let message = document.getElementById("comments")
+
+                if (contactName.value.length < 4){
+                    alert("Name must be at least 4 letters");                    
+                }
+                if (message.value.length < 20){
+                    alert("Message must be at least 20 characters")
+                }
+            }
+
+        </script>
+        <style>
+            html{
+                border: 3px solid rgb(109, 93, 93);
+                margin: 20px 15px;
+                padding: 50px 50px 50px 80px;
+                text-align: justify;
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: bisque;
+            }
+            header{
+                color: rgb(51, 21, 21);    
+            }
+            #img{
+                display: block;
+                margin: auto;
+                
+            }
+            .sub-heading{
+               color: rgb(51, 21, 21);
+               font-family: 'Times New Roman', Times, serif;
+               font-style: italic;
+            }
+            p{
+                font-size: 18px;
+                padding-left: 20px;
+            }
+            .bullets{
+                line-height: 25px;
+                font-size: 18px;
+                padding-bottom: 20px;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+            }
+            #container3{
+                width: 1200px;
+                line-height: 25px;        
+            } 
+            #contact-form{
+                line-height: 30px;
+                font-size: 18px;
+            } 
+            #person-title{
+                margin-left: 100px;
+                width: 50px;
+            }
+            #name{
+                margin-left: 85px;
+                width: 200px;
+            }
+            #email{
+                margin-left: 87px;
+                width: 200px;
+            }            
+            #comments{
+                margin-left: 45px;
+                width: 500px;
+            }      
+        </style> 
+        <header>
+            <img id="img" src="https://res.cloudinary.com/gidikraft/image/upload/v1566626210/Guy_resize_odevcs.jpg" alt="A passport photo of Seun">
+            <hr>
+            <h1 class="top">Fagade Oluwaseun</h1>
+            <h2 class="top">Estate Surveyor</h2>
+            <h3 class="top">17 Oremeji Street<br>
+            Ijesha, Surulere,<br>
+            Lagos.</h3>
+            <h4 class="top">08186822734<br>
+            seunfagade@gmail.com</h4>
+            <hr>
+        </header>
+        <div id="container1">
+            <h2 class="sub-heading">Experience</h2>
+            <p><strong>Ademakinwa & Co</strong> - Industrial training<br>
+            October 2011 - March 2012</p>
+            <ul class="bullets">
+                <li>Property management roles</li>
+                <li>Administrative documentation</li>
+            </ul>
+            <p><strong>Swift Partners Realty LTD, Ota, Ogun State</strong> - Associate Estate Officer<br>
+            April 2013 - February 2014</p>
+            <ul class="bullets">
+                <li>Property assessment for taxation and compensation purpose</li>
+                <li>Property tax administration (Tenement rate)</li>
+                <li>Property management</li>
+            </ul>
+            <p><strong>Partners Realty LTD, Ikeja, Lagos State</strong> - Estate Officer<br>
+                November 2014 - April 2016</p>
+            <ul class="bullets" style="padding-bottom: 20px">
+                <li>Growing the company portfolio</li>
+                <li>Maintain a property schedule</li>
+                <li>Property management</li>
+                <li>Training incoming interns</li>
+            </ul>
+            <hr>
+        </div>
+        <div id="container2">
+            <h2 class="sub-heading">Education</h2>
+            <p>University of Lagos - B.Sc (Estate Management)<br>
+            February 2008 - December 2014</p>
+            <hr>
+        </div>
+        <div id="container3">
+            <h2 class="sub-heading">Achievements</h2>
+            <p>I was head of the team that negotiated acquisition of branch offices for the company’s principals between 2015 and 2016 which include financial institutions and logistic companies.
+                Since the time of my last attachment, I've been about to gain more experience in Warehouse solutions for Npower Southwest region. I currently have various residential and commercial properties in my management portfolio.
+            </p>
+            <hr>
+        </div>
+        <div id="container4">
+            <h2 class="sub-heading">Contact</h2>
+            <form id="contact-form" method="POST" action="#" onsubmit="validate()">
+                <legend>Drop any comments or suggestions here.</legend>
+                <label for="person-title">Title:</label>
+                <input type="text" id="person-title" placeholder="Title" name="title" required><br>
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter your name here" name="name"><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email address" name="email" required><br>
+                <label for="comments">Comments:</label>
+                <textarea name="comments" id="comments" placeholder="Enter additional comments here" rows="10"></textarea><br>
+                <input type="submit" id="submit-button">
+            </form>
+        </div>
+    </body>
+</html>
